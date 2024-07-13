@@ -1,0 +1,51 @@
+#callBookContainer{
+    display: flex;
+    flex-direction: column;
+    grid-area: offline;
+    margin: 7vh;
+    justify-content: start;
+    box-shadow: 0px 0px 16px #999;
+}
+.titleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 3% 0;
+}
+.titleContainer h1{
+    width: 60%;
+    text-align:center;
+    margin: 0 1% ;
+    font-size: 4vh;
+    color: #0056b3;
+}
+.titleIcon{
+    height: 60%;
+    width: auto;
+    color:#0056b3;
+    padding: 1px;
+}
+#callBookContainer ul{
+    list-style: none;
+    text-align: center;
+    align-content: start;
+    
+}
+#callBookContainer ul li h2{
+    list-style: none;
+    text-align: center;
+    margin-Top: 10%;
+    font-size: auto;
+    
+}
+#callBookContainer ul li p{
+    margin: 5% 0;
+    height:  10%;
+    font-size: 5vh;
+    color: #0056b3;
+}
+.fakeicon{
+    opacity: 0;
+}

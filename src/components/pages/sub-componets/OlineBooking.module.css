@@ -1,0 +1,153 @@
+#onlineBookContainer{
+    grid-area: online;
+    margin: 7vh 0 7vh 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    box-shadow: 0px 0px 16px #999;
+    max-width: 43vw;
+}
+.textInfoContainer{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding: 0 15%;
+} 
+.titleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5% 0;
+}
+.titleContainer h1{
+    width: 60%;
+    text-align:center;
+    margin: 0 1% ;
+    font-size:4vh;
+    color: #0056b3;
+}
+.titleContainer button{
+    width: auto;
+    height: 100%;
+    border: none;
+    /* box-shadow: 0 0 8px;
+    border-radius: 17px; */
+    background-color: transparent;
+}
+.titleContainer button .info{
+    margin: 0;
+    padding: 0;
+    height: 60%;
+    width: auto ;
+    color: #0056b3;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: transparent;
+    box-shadow: 0 0 8px;
+    border-radius: 17px;
+}
+.titleContainer button .info:hover{
+   color:  rgba(16, 167, 226, 0.856);
+}
+.titleContainer .titleIcon{
+    height: 60%;
+    width: auto;
+    color:#0056b3;
+    padding: 1px;
+}
+.barContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 10%;
+    margin-top: 5%;
+} 
+.barContainer input{
+    width: 70%;
+    height: 70%;
+    box-shadow: 0px 6px 16px gray;
+    border: none;
+    outline: none;
+    padding: 0 5%;
+    font-weight: bold;;
+}
+.barContainer input::placeholder{
+    color: gray;
+    font-weight: bold;
+    font-size: medium;
+}
+.barContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 10%;
+    margin-top: 5%;
+} 
+.icon{
+    position: relative;
+    transform: translateX(-150%);
+    size: 100%;
+    color: #333;
+}
+.barContainer #botaoSubmicao{
+    width: 40%;
+    height: 70%;
+    box-shadow: 0px 6px 16px gray;
+    padding: 0 5%;
+    font-weight: bolder;
+    border: none;
+}
+.barContainer #botaoSubmicao:hover{
+    background-color: rgb(13, 186, 255);
+    color: white;
+}
+
+.barContainer #botaoSubmicao:active{
+    transform: scale(0.95); /* Diminui o tamanho do botão ao ser clicado */
+    background-color: #0056b3; /* Muda a cor de fundo ao clicar */
+    color: white;
+}
+
+.dateContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 10%;
+    margin-top: 5%;
+}
+
+.dateContainer input{
+    text-decoration: none;
+    color: gray;
+    width: 70%;
+    height: 70%;
+    box-shadow: 0px 6px 16px gray;
+    border: none;
+    outline: none;
+    padding: 0 1% 0 5%;
+}
+
+.dateContainer input::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+}
+
+.fakeicon{
+    opacity: 0;
+}
+
+.errorMessage{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    color: red;
+    transition: 1s;
+    margin-top: 1%;
+}
+

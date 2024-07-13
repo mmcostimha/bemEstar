@@ -1,0 +1,14 @@
+.precarioContainer{
+    margin-top: 5%;
+    min-height: 100vh;
+    border: 1px solid blue;
+    width:100vw;
+}
+.right{
+    margin-right:10%;
+    margin-left:5%;
+}
+.left{
+    margin-left:10%;
+    margin-right:5%;
+}

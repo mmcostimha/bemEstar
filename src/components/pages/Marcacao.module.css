@@ -1,0 +1,13 @@
+.container_marc{
+    display: grid;
+    grid-template-areas: 
+    'online offline'
+    'online maps'
+    'online maps'
+    'online maps' ;
+    min-height: 110vh;
+    margin-top: 10vh;
+    width: 80vw;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
