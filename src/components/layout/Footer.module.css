@@ -1,5 +1,4 @@
 footer{
-    border: 1px solid red;
     background-color: #333;
     color: aliceblue;
     padding: 3%;
@@ -10,7 +9,6 @@ footer{
     justify-content: start;
     align-items: center;
     list-style-type: none;
-    border: 1px solid red;
 }
 .social_iteam{
     margin:0 2rem;

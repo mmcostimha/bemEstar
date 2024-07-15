@@ -1,7 +1,6 @@
 .home_container{
     display: flex;
     flex-direction: column;
-    border: 3px solid orange;
     width: 100%;
     
 }
@@ -11,7 +10,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px solid green;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -20,14 +18,12 @@
 }
 
 .frase{
-    border: 1px solid red;
     text-align: center;
     width: 50%;
     margin: 3%;
 }
 
 .home_home_container p{
-    border: 1px solid yellow;
     text-align: center;
     width:fit-content;
     margin: 3%;
