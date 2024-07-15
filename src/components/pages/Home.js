@@ -33,7 +33,7 @@ function Home({sobreRef,staffRef,precarioRef}){
             </div>
             <Sobre sobreRef={sobreRef}/>
             <Staff staffRef={staffRef}/>
-            <Precario precarioRef={precarioRef}/>
+            {/* <Precario precarioRef={precarioRef}/> */}
         </div>
     )
 }

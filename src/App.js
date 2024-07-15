@@ -27,10 +27,6 @@ function App() {
                 
         </Routes>
         </Container>
-        <>
-        teste vagabundo
-        
-        </>
         <Footer/>
       </Router>
     </ScrollProvider>
