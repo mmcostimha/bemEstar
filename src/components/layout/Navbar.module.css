@@ -1,8 +1,9 @@
+@import "../../color.css";
 
 .navbar{
     display: flex;
     flex-wrap: nowrap;
-    background-color: #1885fa96;
+    background-color: var(--primary-color);
     position: fixed;
     width: 100%;
     height: 10vh;
@@ -44,16 +45,18 @@
 .item a {
     color: aliceblue;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1vw;
 }
 .item a:hover{
-    color: rgb(21, 130, 225);
+    color:var(--secundary-color);
    
 }
 .scrolled .item a{
     color: black;
 }
 .scrolled .item a:hover{
-    color: rgb(21, 130, 225);
+    color: var(--primary-color);
 }
 
 .navbar_logo{

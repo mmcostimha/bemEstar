@@ -29,7 +29,6 @@ function Home({sobreRef,staffRef,precarioRef}){
         <div className={styles.home_container} onLoad={()=>scrollTo()}>
             <div style={{ backgroundImage: `url(${url})`}} className={styles.home_home_container} >
                 <h1 className={styles.frase}>{data.homePage.title}</h1>
-                <p>Isto vai ser um botão para a marcação</p>{console.log(url)}
             </div>
             <Sobre sobreRef={sobreRef}/>
             <Staff staffRef={staffRef}/>
