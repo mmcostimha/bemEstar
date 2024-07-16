@@ -31,7 +31,6 @@
     list-style: none;
     text-align: center;
     align-content: start;
-    
 }
 #callBookContainer ul li h2{
     list-style: none;
@@ -48,4 +47,22 @@
 }
 .fakeicon{
     opacity: 0;
+}
+
+@media only screen and (max-width: 450px){
+    #callBookContainer{
+        margin: 3vh;
+        max-width: 100%;
+        height: fit-content;
+    }
+    .titleIcon{
+        height: 30%;
+    }
+    #callBookContainer ul li h2{
+        font-size: 6vw;
+    }
+    .titleContainer h1{
+        font-size: 5vh;
+        
+    }
 }

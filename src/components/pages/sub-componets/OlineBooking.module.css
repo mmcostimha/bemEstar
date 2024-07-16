@@ -102,6 +102,7 @@
     padding: 0 5%;
     font-weight: bolder;
     border: none;
+    font-size: 2vh;
 }
 .barContainer #botaoSubmicao:hover{
     background-color: rgb(13, 186, 255);
@@ -151,3 +152,16 @@
     margin-top: 1%;
 }
 
+@media only screen and (max-width: 450px){
+    #onlineBookContainer{
+        margin: 3vh;
+        max-width: 100%;
+        height: 70vh;
+    }
+    .titleContainer .titleIcon{
+        height: 30%;
+    }
+    .titleContainer button .info{
+        height: 30%;
+    }
+}
