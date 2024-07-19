@@ -1,0 +1,51 @@
+@import "../../../color.css";
+.list{  
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: end;
+    flex-flow: row nowrap;
+    width: 100%;
+    text-decoration: none;
+    align-items: stretch;
+    margin-right: 4%;
+    border: 1px solid black;
+}
+
+.item{
+    
+    /* border:1px solid red; */
+    align-content: center;
+    padding: 0.5% 2% 0.5% 2%; 
+    flex-grow: 1%;
+    
+}
+.item a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1vw;
+}
+.item a:hover{
+    color:var(--secundary-color);
+   
+}
+
+.itemScrolled{
+    
+    /* border:1px solid red; */
+    align-content: center;
+    padding: 0.5% 2% 0.5% 2%; 
+    flex-grow: 1%;
+    
+}
+.itemScrolled a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1vw;
+}
+.itemScrolled a:hover{
+    color: var(--primary-color);
+   
+}

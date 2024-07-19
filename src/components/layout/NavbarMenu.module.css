@@ -1,0 +1,31 @@
+@import "../../color.css";
+.container{
+    display: flex;
+    width: 100%;
+    height: 90%;
+    align-content: center;
+    justify-content: end;
+}
+.menuIcon{
+    margin-right: 2%;
+    color: white;
+    height: 100%;
+    width: 15vw;
+    transition: 0.2s;
+}
+.menuIconScrolled{
+    margin-right: 2%;
+    color:  var(--primary-color);
+    height: 100%;
+    width: 15vw;
+    transition: 0.2s;
+}
+
+.menuIcon:active{
+    color:  var(--secundary-color);
+    transform: scale(0.95);
+}
+.menuIconScrolled:active{
+    color:  var(--secundary-color);
+    transform: scale(0.95);
+}
