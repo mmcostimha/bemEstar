@@ -6,7 +6,7 @@ import useWindowSize from "../context/WindowSize";
 import NavbarMenu from "./NavbarMenu";
 import PageLinks from "./sub-components/PageLinks";
 
-function Navbar({sobreRef,staffRef,homeRef,precarioRef,marcacaoRef}){
+function Navbar({sobreRef,staffRef,homeRef,precarioRef,marcacaoRef,navMenuRef}){
 
     const [scrolled, setScrolled] = useState(false);
     const { width } = useWindowSize();
@@ -26,19 +26,18 @@ function Navbar({sobreRef,staffRef,homeRef,precarioRef,marcacaoRef}){
         }
     })
 
-   
+     
     return(
         <nav className={scrolled ? styles.scrolled:styles.navbar}>
             <Container>
                 <Link className={styles.navbar_logo } to="/"><img src="https://picsum.photos/150/100" alt="Home"/></Link> 
-                {console.log("Testando:  ")}
-                {console.log(useWindowSize.width)}
-                {width < 768 ? <NavbarMenu scrolled={scrolled}/> :<PageLinks scrolled={scrolled} sobreRef={sobreRef} staffRef={staffRef} homeRef={homeRef} precarioRef={precarioRef} marcacaoRef={marcacaoRef}/>}
+                
+                {width < 768 ? <NavbarMenu scrolled={scrolled} sobreRef={sobreRef} staffRef={staffRef} homeRef={homeRef} precarioRef={precarioRef} marcacaoRef={marcacaoRef} navMenuRef={navMenuRef}/> :
+                <PageLinks type={"cabecario"} scrolled={scrolled} sobreRef={sobreRef} staffRef={staffRef} homeRef={homeRef} precarioRef={precarioRef} marcacaoRef={marcacaoRef}/>}
             </Container>
         </nav>  
     )
 }
-
     
 
 

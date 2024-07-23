@@ -79,21 +79,21 @@ function OlineBooking(){
             )}
             <div className={style.barContainer}>
                 <input type="text" placeholder="Nome" onChange={(e)=> setName(e.target.value)} value={name}/>
-                <IoPerson className={style.icon}/>
+                {/* <IoPerson className={style.icon}/> */}
             </div>
             
             <div className={style.barContainer}>
                 <input type="email" placeholder="Email" onChange={(e)=> setEmail(e.target.value)} value={email}/>
-                <MdEmail className={style.icon}/>
+                {/* <MdEmail className={style.icon}/> */}
             </div>
             <div className={style.barContainer}>
                 <input type="tel" placeholder="Telemóvel" onChange={(e)=> setNumber(e.target.value)} value={number}/>
-                <BsFillTelephoneFill className={style.icon}/>
+                {/* <BsFillTelephoneFill className={style.icon}/> */}
             </div>
             
             <div className={style.dateContainer}>
                 <input type="datetime-local" onChange={(e)=> setDate(e.target.value)} value={date} />
-                <MdEmail className={style.fakeicon}/>
+                {/* <MdEmail className={style.fakeicon}/> */}
             </div>
             
             {sent ? (

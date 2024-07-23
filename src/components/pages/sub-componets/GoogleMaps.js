@@ -17,9 +17,9 @@ function Mapa(){
             <Map
                 defaultZoom={defaultProps.zoom}
                 defaultCenter={defaultProps.center}
-                onCameraChanged={(ev: MapCameraChangedEvent) =>
-                    console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
-                }
+                // onCameraChanged={(ev: MapCameraChangedEvent) =>
+                //     console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
+                // }
             >
                 {/* <AdvancedMarker
                     position={defaultProps.center}

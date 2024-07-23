@@ -15,11 +15,12 @@ function App() {
   const homeRef = useRef(null);
   const precarioRef = useRef(null);
   const marcacaoRef = useRef(null);
+  const navMenuRef = useRef(null);
   
   return (
     <ScrollProvider>
       <Router>
-        <Navbar sobreRef={sobreRef} staffRef={staffRef} homeRef={homeRef} precarioRef={precarioRef}/>
+        <Navbar sobreRef={sobreRef} staffRef={staffRef} homeRef={homeRef} precarioRef={precarioRef} navMenuRef={navMenuRef}/>
         <Container referencia={homeRef} customClass="min_height">
           <Routes>
             <Route path="/" element={<Home sobreRef={sobreRef} staffRef={staffRef}  precarioRef={precarioRef}/>} />
