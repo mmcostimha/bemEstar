@@ -1,3 +1,5 @@
+@import "../../../color.css";
+
 #callBookContainer{
     display: flex;
     flex-direction: column;
@@ -19,12 +21,12 @@
     text-align:center;
     margin: 0 1% ;
     font-size: 4vh;
-    color: #0056b3;
+    color: var(--primary-color);
 }
 .titleIcon{
     height: 60%;
     width: auto;
-    color:#0056b3;
+    color:var(--primary-color);
     padding: 1px;
 }
 #callBookContainer ul{
@@ -37,32 +39,64 @@
     text-align: center;
     margin-Top: 10%;
     font-size: auto;
-    
+    color: var(--secundary-color);
 }
 #callBookContainer ul li p{
     margin: 5% 0;
     height:  10%;
-    font-size: 5vh;
-    color: #0056b3;
+    font-size: 180%;
+    color: var(--primary-color);
 }
 .fakeicon{
     opacity: 0;
 }
 
-@media only screen and (max-width: 758px){
-    #callBookContainer{
-        margin: 3vh;
-        max-width: 100%;
-        height: fit-content;
-    }
-    .titleIcon{
-        height: 30%;
-    }
+@media only screen and (max-width: 1170px){
     #callBookContainer ul li h2{
-        font-size: 6vw;
+        font-size: 150%;
+    }
+    #callBookContainer ul li p{
+        font-size: 180%;
     }
     .titleContainer h1{
-        font-size: 5vh;
-        
+        font-size: 150%;
+    }
+    .titleIcon{
+        height: 60%;
+    }
+}
+@media only screen and (max-width: 780px){
+    #callBookContainer{
+        margin: 3vh;
+    }
+    #callBookContainer ul li h2{
+        font-size: 150%;
+        margin: 2% 0;
+    }
+    #callBookContainer ul li p{
+        font-size: 180%;
+    }
+    .titleContainer h1{
+        width: 60%;
+        margin: 0 1% ;
+        font-size: 160%;
+    }
+    .titleIcon{
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 490px){
+    #callBookContainer ul li h2{
+        font-size: 135%;
+        margin: 2% 0;
+    }
+    #callBookContainer ul li p{
+        font-size: 160%;
+    }
+    .titleContainer h1{
+        width: 60%;
+        margin: 0 1% ;
+        font-size: 150%;
     }
 }

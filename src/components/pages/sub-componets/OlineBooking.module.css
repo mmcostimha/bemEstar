@@ -1,3 +1,5 @@
+@import "../../../color.css";
+
 #onlineBookContainer{
     grid-area: online;
     margin: 7vh 0 7vh 7vh;
@@ -7,6 +9,7 @@
     align-items: start;
     box-shadow: 0px 0px 16px #999;
     max-width: 43vw;
+    min-height: 70vh;
 }
 .textInfoContainer{
     text-align: center;
@@ -27,8 +30,8 @@
     width: 60%;
     text-align:center;
     margin: 0 1% ;
-    font-size:4vh;
-    color: #0056b3;
+    font-size: 180%;
+    color: var(--primary-color);
 }
 .titleContainer button{
     width: auto;
@@ -43,7 +46,7 @@
     padding: 0;
     height: 60%;
     width: auto ;
-    color: #0056b3;
+    color: var(--primary-color);
     cursor: pointer;
     transition: 0.5s;
     background-color: transparent;
@@ -56,7 +59,7 @@
 .titleContainer .titleIcon{
     height: 60%;
     width: auto;
-    color:#0056b3;
+    color:var(--primary-color);
     padding: 1px;
 }
 .barContainer{
@@ -86,8 +89,8 @@
     align-items: center;
     width: 100%;
     justify-content: center;
-    height: 10%;
-    margin-top: 5%;
+    height: 10vh;
+    margin-top: 5vh;
 } 
 .icon{
     position: relative;
@@ -103,15 +106,16 @@
     font-weight: bolder;
     border: none;
     font-size: 2vh;
+    margin-bottom: 5vh;
 }
 .barContainer #botaoSubmicao:hover{
-    background-color: rgb(13, 186, 255);
+    background-color: var(--secundary-color);
     color: white;
 }
 
 .barContainer #botaoSubmicao:active{
     transform: scale(0.95); /* Diminui o tamanho do botão ao ser clicado */
-    background-color: #0056b3; /* Muda a cor de fundo ao clicar */
+    background-color: var(--primary-color); /* Muda a cor de fundo ao clicar */
     color: white;
 }
 
@@ -120,8 +124,8 @@
     align-items: center;
     width: 100%;
     justify-content: center;
-    height: 10%;
-    margin-top: 5%;
+    height: 10vh;
+    margin-top: 5vh;
 }
 
 .dateContainer input{
@@ -152,16 +156,77 @@
     margin-top: 1%;
 }
 
-@media only screen and (max-width: 450px){
+
+@media only screen and (max-width: 1170px){
+    .titleContainer .titleIcon{
+        height:60%;
+    }
+    .titleContainer button .info{
+        height:60%;
+    }
+    .titleContainer h1{
+        width: 75%;
+        text-align:center;
+        margin: 0 1% ;
+        font-size: 160%;
+        color: var(--primary-color);
+    }
+    
+    
+}
+@media only screen and (max-width: 780px){
     #onlineBookContainer{
         margin: 3vh;
         max-width: 100%;
         height: 70vh;
     }
+    
     .titleContainer .titleIcon{
-        height: 30%;
+        height: 100%;
     }
     .titleContainer button .info{
-        height: 30%;
+        height: 100%;
+    }
+    .titleContainer h1{
+        width: 60%;
+        margin: 0 1% ;
+        font-size: 140%;
+    }
+    .dateContainer input{
+        height: 100%;
+    }
+    .barContainer input{
+        height: 100%;
+    }
+    .titleContainer{
+        margin: 5% 0 2% 0;
+    }
+}
+
+@media only screen and (max-width: 490px){
+    #onlineBookContainer{
+        margin: 3vh;
+        max-width: 100%;
+        height: 70vh;
+    }
+    .titleContainer h1{
+        width: 60%;
+        text-align:center;
+        margin: 0 1% ;
+        font-size: 120%;
+        color: var(--primary-color);
+    }
+    .dateContainer input{
+        height: 100%;
+    }
+    .barContainer input{
+        height: 100%;
+    }
+    .titleContainer{
+        margin: 5% 0 2% 0;
+    }
+
+    .barContainer #botaoSubmicao{
+        margin-bottom: 5vh;
     }
 }

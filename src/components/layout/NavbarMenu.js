@@ -14,13 +14,18 @@ function NavbarMenu({scrolled,sobreRef, staffRef,homeRef, precarioRef,marcacaoRe
         console.log(menuPage);
     }
 
-    useEffect(()=>{
-        let handler=(e)=>{
-            if(!navMenuRef.current.contains(e.target))
+    useEffect(() => {
+        const handler = (e) => {
+            if (navMenuRef && navMenuRef.current && !navMenuRef.current.contains(e.target)) {
                 setMenuPage(false);
+            }
         };
-        document.addEventListener("mousedown",handler);
-    })
+
+        document.addEventListener("mousedown", handler);
+        return () => {
+            document.removeEventListener("mousedown", handler);
+        };
+    }, [navMenuRef]);
 
     return(
         <div ref={navMenuRef} className={styles.container}>

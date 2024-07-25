@@ -18,13 +18,13 @@ function OlineBooking(){
     const [date, setDate] = useState();
     const [info,setInfo]= useState(false);
     
-    function infoClickHandle(e){
-        e.preventDefault();
-        setInfo(true);
-        setTimeout(() => {
-            setInfo(false);
-        }, 15000);
-    }
+    // function infoClickHandle(e){
+    //     e.preventDefault();
+    //     setInfo(true);
+    //     setTimeout(() => {
+    //         setInfo(false);
+    //     }, 15000);
+    // }
 
     function checkEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -70,13 +70,13 @@ function OlineBooking(){
             <div className={style.titleContainer}>
                 <FaCalendarAlt className={style.titleIcon}/>
                 <h1>Pedido de Marcação Online</h1>
-                <button onClick={(e)=>infoClickHandle(e)}><FaInfoCircle className={style.info} /></button>
+                {/* <button onClick={(e)=>infoClickHandle(e)}><FaInfoCircle className={style.info} /></button> */}
             </div>
-            {info && (
+            {/* {info && (
                 <div className={style.textInfoContainer}>
                     <p>Seu pedido será e efetuado e lhe será enviado uma confirmação, esta confirmação será gerada no final do expediente e será enviada tanto em formato de email quanto em formado de mensagem.</p>
                 </div>
-            )}
+            )} */}
             <div className={style.barContainer}>
                 <input type="text" placeholder="Nome" onChange={(e)=> setName(e.target.value)} value={name}/>
                 {/* <IoPerson className={style.icon}/> */}

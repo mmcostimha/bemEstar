@@ -11,10 +11,21 @@
     box-sizing: border-box;
 }
 
-@media only screen and (max-width: 758px){
+@media only screen and (max-width: 1170px){
+    .container_marc{
+        width: 95vw;
+    }
+}
+
+@media only screen and (max-width: 780px){
     .container_marc{
         display: flex;
         flex-direction: column;
+        width: 80vw;
+    }
+}
+@media only screen and (max-width:  490px){
+    .container_marc{
         width: 90vw;
     }
 }
