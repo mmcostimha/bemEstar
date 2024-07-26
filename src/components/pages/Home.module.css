@@ -10,11 +10,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-top: 10vh;
     width: 100%;
     height: 100vh;
     transition: 0.5s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
 }
 
 .frase{

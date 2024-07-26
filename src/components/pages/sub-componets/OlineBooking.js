@@ -17,6 +17,7 @@ function OlineBooking(){
     const [number, setNumber] = useState();
     const [date, setDate] = useState();
     const [info,setInfo]= useState(false);
+    const [privCheck, setPrivCheck]= useState(false);
     
     // function infoClickHandle(e){
     //     e.preventDefault();
@@ -95,7 +96,17 @@ function OlineBooking(){
                 <input type="datetime-local" onChange={(e)=> setDate(e.target.value)} value={date} />
                 {/* <MdEmail className={style.fakeicon}/> */}
             </div>
-            
+
+            <div className={style.checkContainer}>
+                
+                <label><input type="checkbox" placeholder="Check" onChange={(e)=> setPrivCheck(e.target.value)} value={privCheck} /> </label>
+                <p>
+                Li e aceito os <a href="">termos e condições</a> e a <a href="">política de privacidade</a>.
+                </p>
+                
+                {/* <MdEmail className={style.fakeicon}/> */}
+            </div>
+
             {sent ? (
                 <div className={style.textInfoContainer}>
                     <p>Seu pedido foi submetido com sucesso!</p>
@@ -110,6 +121,7 @@ function OlineBooking(){
                 {messageError}
                 </div>
             )}
+            
 
         </div>
     )

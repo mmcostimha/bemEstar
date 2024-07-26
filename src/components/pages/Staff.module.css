@@ -15,7 +15,8 @@
 }
 .person_container_left img{
     margin: 1%;
-    height: 30vh;
+    height: 30vw;
+    max-height: 30vh;
     max-width: 35vw;
 }
 .person_container_left .info{
@@ -44,7 +45,8 @@
 }
 .person_container_right img{
     margin: 1%;
-    height: 30vh;
+    height: 30vw;
+    max-height: 30vh;
     max-width: 35vw;   
 }
 .person_container_right .info{
@@ -65,7 +67,7 @@
     margin: 1%;
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width:780px){
 
     .person_container_right .info{
         margin: 1% 1% 1% 1%;
@@ -75,7 +77,65 @@
     }
     .person_container_right img{
         margin: 1%;
-        height: 30vh;
+        height: 30vw;
         max-width: 35vw;   
+    }
+    
+    .person_container_left .info h2{
+        margin: 3%;
+        font-size: 5vw;
+        
+    }
+    .person_container_left .info h2{
+        margin: 3%;
+        font-size: 5vw;
+    }
+}
+@media only screen and (max-width:490px){
+
+    .person_container_left{
+        display: flex;
+        flex-direction: column;
+        margin: 3vh 10%;
+        height: 70vh;
+    }
+    .person_container_right{
+        display: flex;
+        flex-direction: column;
+        margin: 3vh 10%;
+        height: 70vh;
+    }
+    .person_container_right .info{
+        margin: 1% 1% 1% 1%;
+        width: 98%;
+        height: 48%;
+    }
+    .person_container_left .info{
+        margin: 1% 1% 1% 1%;
+        width: 98%;
+        height: 48%;
+    }
+    .person_container_right img{
+        margin: 1%;
+        width: auto;
+        height: auto;
+        max-width: none;
+        max-height: 60%;
+    }
+    .person_container_left img{
+        margin: 1%;
+        width: auto;
+        height: auto;
+        max-width: none;
+        max-height: 60%;
+    }
+    
+    .person_container_left .info h2{
+        margin: 3%;
+        font-size: 6vw;
+    }
+    .person_container_left .info h2{
+        margin: 3%;
+        font-size: 6vw;
     }
 }
