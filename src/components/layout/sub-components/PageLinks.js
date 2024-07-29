@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation} from "react-router-dom";
 import styles from "./PageLinks.module.css"
 import { useScroll } from '../../context/ScrollContext';
 
-function PageLinks({type,sobreRef,staffRef,homeRef,precarioRef,marcacaoRef,scrolled}){
+function PageLinks({type,sobreRef,staffRef,homeRef,casosRef,marcacaoRef,scrolled}){
     const navigate = useNavigate();
     const location = useLocation();
     const { setScrollToSection } = useScroll(); 
@@ -19,14 +19,14 @@ function PageLinks({type,sobreRef,staffRef,homeRef,precarioRef,marcacaoRef,scrol
             console.log(page);
         }
     };
-    const teste=(type=="mobile");
+    const teste=(type==="mobile");
 
     return(
-        <ul className={`${styles.list} ${type=="mobile" ? styles.mobile : styles.cabecario}`}>   
+        <ul className={`${styles.list} ${type==="mobile" ? styles.mobile : styles.cabecario}`}>   
             <li className={!scrolled ? (styles.item) :(styles.itemScrolled)}><Link  onClick={(e)=> onClickHandle(e,homeRef,"/")}>Home</Link></li>
             <li className={!scrolled ? (styles.item) :(styles.itemScrolled)}><Link  onClick={(e)=> onClickHandle(e,sobreRef,"/")} >Sobre</Link></li>
             <li className={!scrolled ? (styles.item) :(styles.itemScrolled)}><Link  onClick={(e)=> onClickHandle(e,staffRef,"/")}>Proficionais</Link></li>
-            <li className={!scrolled ? (styles.item) :(styles.itemScrolled)}><Link  onClick={(e)=> onClickHandle(e,precarioRef,"/")}>Preçário</Link></li>
+            <li className={!scrolled ? (styles.item) :(styles.itemScrolled)}><Link  onClick={(e)=> onClickHandle(e,casosRef,"/")}>Casos Clínicos</Link></li>
             <li className={!scrolled ? (styles.item) :(styles.itemScrolled)}><Link  onClick={(e)=> onClickHandle(e,marcacaoRef,"/marcacao")}>Marcação</Link></li>
         </ul>
     )

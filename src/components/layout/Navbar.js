@@ -7,7 +7,7 @@ import NavbarMenu from "./NavbarMenu";
 import PageLinks from "./sub-components/PageLinks";
 import { useQuery } from "graphql-hooks";
 
-function Navbar({sobreRef,staffRef,homeRef,precarioRef,marcacaoRef,navMenuRef}){
+function Navbar({sobreRef,staffRef,homeRef,casosRef,marcacaoRef,navMenuRef}){
 
     const [scrolled, setScrolled] = useState(false);
     const { width } = useWindowSize();
@@ -44,8 +44,8 @@ function Navbar({sobreRef,staffRef,homeRef,precarioRef,marcacaoRef,navMenuRef}){
             <Container>
                 <Link className={styles.navbar_logo } to="/"><img src={data.barraNavegaO.logo.url} alt="Home"/></Link> 
                 
-                {width < 768 ? <NavbarMenu scrolled={scrolled} sobreRef={sobreRef} staffRef={staffRef} homeRef={homeRef} precarioRef={precarioRef} marcacaoRef={marcacaoRef} navMenuRef={navMenuRef}/> :
-                <PageLinks type={"cabecario"} scrolled={scrolled} sobreRef={sobreRef} staffRef={staffRef} homeRef={homeRef} precarioRef={precarioRef} marcacaoRef={marcacaoRef}/>}
+                {width < 768 ? <NavbarMenu scrolled={scrolled} sobreRef={sobreRef} staffRef={staffRef} homeRef={homeRef} casosRef={casosRef} marcacaoRef={marcacaoRef} navMenuRef={navMenuRef}/> :
+                <PageLinks type={"cabecario"} scrolled={scrolled} sobreRef={sobreRef} staffRef={staffRef} homeRef={homeRef} casosRef={casosRef} marcacaoRef={marcacaoRef}/>}
             </Container>
         </nav>  
     )

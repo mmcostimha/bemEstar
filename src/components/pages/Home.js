@@ -2,10 +2,10 @@ import { useScroll } from "../context/ScrollContext";
 import styles from "./Home.module.css"
 import Sobre from "./Sobre"
 import Staff from "./Staff"
-import Precario from "./Precario";
+import Casos from "./Casos";
 import { useQuery } from "graphql-hooks";
 
-function Home({sobreRef,staffRef,precarioRef}){
+function Home({sobreRef,staffRef,casosRef}){
     const ref = useScroll();
     function scrollTo(){
         ref.scrollToSection?.current?.scrollIntoView({ behavior: 'smooth' });
@@ -32,7 +32,7 @@ function Home({sobreRef,staffRef,precarioRef}){
             </div>
             <Sobre sobreRef={sobreRef}/>
             <Staff staffRef={staffRef}/>
-            {/* <Precario precarioRef={precarioRef}/> */}
+            <Casos casosRef={casosRef}/>
         </div>
     )
 }
