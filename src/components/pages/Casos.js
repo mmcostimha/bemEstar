@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function Casos({casosRef}){
     const { width } = useWindowSize();
-
+    var url=null;
     const [imgNumber,setImgNumber]=useState(0);
 
     const Casos = `{
@@ -17,24 +17,19 @@ function Casos({casosRef}){
         }
     }`;
     const { loading, error, data } = useQuery(Casos,{});
-
+    
     if (loading) return "Loading...";
     if (error) return "Something Bad Happened";
 
+    const maxNumber = data.allCasoClinicos.length-1;
     function nextClick(){
-        if(imgNumber === data.allCasoClinicos.lenght)
-            setImgNumber(0);
-        else
+        if(imgNumber !== maxNumber)
             setImgNumber(imgNumber+1);
     }
-    function prevClick(){
-        if(imgNumber === data.allCasoClinicos.lenght)
-            setImgNumber(0);
-        else
-            setImgNumber(imgNumber-1);
 
-        {console.log(data.allCasoClinicos.lenght)}
-        
+    function prevClick(){
+        if(imgNumber !== 0)
+            setImgNumber(imgNumber-1);    
     }
 
     function ListaDeCasos({ casos }) {
@@ -46,6 +41,7 @@ function Casos({casosRef}){
                         // Condição para renderizar apenas casos que atendem a um critério e têm índice par
                         return (
                             <div className={styles.casoContainer}>
+
                                 {console.log(data.allCasoClinicos.lenght)}
                                 <img src={caso.foto.url} alt="caso-clinico"/>
                             </div>
@@ -55,17 +51,15 @@ function Casos({casosRef}){
                 </>
             );
         }else{
+            url=casos[imgNumber].foto.url
             return (
-                <div className={styles.casoContainer}>
+                <div className={styles.casoContainer} style={{ backgroundImage: `url(${url})`}}>
                     
                     <div className={styles.buttonContainer} >
-                        <button id={styles.left} onClick={()=>nextClick()}> </button>
-                        <button id={styles.right} onClick={()=>prevClick()}> </button>
+                        <button id={styles.left} onClick={()=>prevClick()}> </button>
+                        <button id={styles.right} onClick={()=>nextClick()}> </button>
                     </div>
-                    <img src={casos[imgNumber].foto.url} alt="caso-clinico"/>
-                    
-                    
-                    
+                    {/* <img src={casos[imgNumber].foto.url} alt="caso-clinico"/> */}
                 </div>
             )
         }
@@ -78,8 +72,7 @@ function Casos({casosRef}){
         <div className={styles.bigContainer}>
             <h1>Casos clínicos</h1>
             <ListaDeCasos casos={data.allCasoClinicos} />
-            
-           
+        
         </div>
        </Container>
     )
