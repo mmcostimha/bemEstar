@@ -53,6 +53,7 @@ function Staff({staffRef}){
     return(
         <Container referencia={staffRef}>
             <div className={style.container}>
+                <h1>Proficionais</h1>
                 <ListaDeItens itens={data.allFuncionarios}/>
             </div>                    
         </Container>

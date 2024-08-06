@@ -73,7 +73,6 @@
 }
 .checkContainer p{
     margin-left:5%;
-
 }
 .checkContainer input{
    color: var(--primary-color);
@@ -210,6 +209,14 @@
         margin: 0 1% ;
         font-size: 140%;
     }
+    .barContainer {
+        height: 10%;
+        margin-top: 5%;
+    }
+    .dateContainer {
+        height: 10%;
+        margin-top: 5%;
+    }
     .dateContainer input{
         height: 100%;
     }
@@ -230,9 +237,17 @@
     .titleContainer h1{
         width: 60%;
         text-align:center;
-        margin: 0 1% ;
+        margin: 0 1%;
         font-size: 120%;
         color: var(--primary-color);
+    }
+    .barContainer {
+        height: 10%;
+        margin-top: 5%;
+    }
+    .dateContainer {
+        height: 10%;
+        margin-top: 5%;
     }
     .dateContainer input{
         height: 100%;
@@ -246,5 +261,31 @@
 
     .barContainer #botaoSubmicao{
         margin-bottom: 5vh;
+    }
+    .checkContainer p{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 320px){
+    
+    .checkContainer p{
+        font-size: 10px;
+    }
+    .titleContainer h1{
+        width: 60%;
+        margin: 0 1%;
+        font-size: 100%;
+        color: var(--primary-color);
+    }
+    .barContainer {
+        height: 8%;
+        margin-top: 6%;
+    }
+    .dateContainer {
+        height: 8%;
+        margin-top: 6%;
+    }
+    .barContainer #botaoSubmicao {
+        font-size: 2vh;
     }
 }

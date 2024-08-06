@@ -3,19 +3,25 @@ import styles from "./Home.module.css"
 import Sobre from "./Sobre"
 import Staff from "./Staff"
 import Casos from "./Casos";
+import useWindowSize from "../context/WindowSize";
 import { useQuery } from "graphql-hooks";
 
 function Home({sobreRef,staffRef,casosRef}){
     const ref = useScroll();
+    const { width } = useWindowSize();
+
     function scrollTo(){
         ref.scrollToSection?.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
     const homePage = `{
         homePage {
-            title
             homePageImg {
-                url
+            url
+            }
+            title
+            homePageImgSmall {
+            url
             }
         }
       }`;
@@ -23,7 +29,14 @@ function Home({sobreRef,staffRef,casosRef}){
     const { loading, error, data } = useQuery(homePage,{});
     if (loading) return "Loading...";
     if (error) return "Something Bad Happened";
-    var url=data.homePage.homePageImg.url;
+
+    if(width<=1024){
+        var url=data.homePage.homePageImgSmall.url;
+    }else{
+        var url=data.homePage.homePageImg.url;
+    }
+    
+    
 
     return(
         <div className={styles.home_container} onLoad={()=>scrollTo()}>

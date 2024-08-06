@@ -4,7 +4,12 @@
     min-height:90vh;
     margin: 10vh 0;
     width: 100%;
-    
+}
+.container h1{
+    text-align: center;
+    width: 100%;
+    margin: 3vh 0 3vh 0;
+    color: var(--primary-color);
 }
 
 .person_container_left{

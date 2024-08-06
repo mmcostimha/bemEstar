@@ -113,7 +113,7 @@ function OlineBooking(){
                 </div>
             ) : (
                 <div className={style.barContainer}>
-                    <button id={style.botaoSubmicao} onClick={Submeter}>Submeter Pedido</button>
+                    <button id={style.botaoSubmicao} onClick={Submeter}>Submeter </button>
                 </div>
             )}
             {messageError && (
