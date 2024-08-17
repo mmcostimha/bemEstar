@@ -94,7 +94,11 @@
     border: none;
     outline: none;
     padding: 0 5%;
-    font-weight: bold;;
+    font-weight: bold;
+}
+.barContainer input .redBorder{
+    
+    border: 1px solid red;
 }
 .barContainer input::placeholder{
     color: gray;

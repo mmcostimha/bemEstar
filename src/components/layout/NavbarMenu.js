@@ -11,7 +11,6 @@ function NavbarMenu({scrolled,sobreRef, staffRef,homeRef, casosRef,marcacaoRef,n
     function clickHandler(e){
         e.preventDefault();
         setMenuPage(!menuPage);
-        console.log(menuPage);
     }
 
     useEffect(() => {

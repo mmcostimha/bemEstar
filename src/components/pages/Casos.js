@@ -41,8 +41,6 @@ function Casos({casosRef}){
                         // Condição para renderizar apenas casos que atendem a um critério e têm índice par
                         return (
                             <div className={styles.casoContainer}>
-
-                                {console.log(data.allCasoClinicos.lenght)}
                                 <img src={caso.foto.url} alt="caso-clinico"/>
                             </div>
                         )
@@ -51,7 +49,7 @@ function Casos({casosRef}){
                 </>
             );
         }else{
-            url=casos[imgNumber].foto.url
+            url=casos[imgNumber].foto.url;
             return (
                 <div className={styles.casoContainer} style={{ backgroundImage: `url(${url})`}}>
                     

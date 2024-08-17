@@ -25,7 +25,7 @@ function Staff({staffRef}){
                     // Condição para renderizar apenas itens que atendem a um critério e têm índice par
                     if (index % 2 === 0) {
                         return (
-                            <div className={style.person_container_left}>
+                            <div key={index} className={style.person_container_left}>
                                 <img src={item.foto.url} alt="employee"/>
                                 
                                 <div className={style.info}>

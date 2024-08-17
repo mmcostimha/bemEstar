@@ -17,6 +17,7 @@ function OlineBooking(){
     const [number, setNumber] = useState();
     const [date, setDate] = useState();
     const [info,setInfo]= useState(false);
+    const [submitTried,setSubmitTried]= useState(false);
     const [privCheck, setPrivCheck]= useState(false);
     
     // function infoClickHandle(e){
@@ -39,15 +40,16 @@ function OlineBooking(){
 
     function Submeter(e){
         e.preventDefault();
+        setSubmitTried(true);
         const templateParams ={
             name:name,
             number:number,
             date:date,
             email:email
         }
-        console.log(name,number,email,date);
+        console.log(name,number,email,date,submitTried);
         //tenho que melhorar esse if
-        if(name === undefined || !checkEmail(email)  || !checkNumber(number) || date === undefined){
+        if(name === undefined || !checkEmail(email)  || !checkNumber(number) || date === undefined || privCheck === false){
             setMessageError("Preencha todos os campos corretamente");
             // Limpa a mensagem de erro após 5 segundos
             setTimeout(() => {
@@ -62,6 +64,7 @@ function OlineBooking(){
                 setEmail(""); 
                 setNumber("");
                 setSent(true);
+                setSubmitTried(false);
             }, (err)=> console.log("ERRO", err))
         }
     }
@@ -84,7 +87,8 @@ function OlineBooking(){
             </div>
             
             <div className={style.barContainer}>
-                <input type="email" placeholder="Email" onChange={(e)=> setEmail(e.target.value)} value={email}/>
+                <input className={`${ submitTried ? style.redBorder: console.log("tentando")}`} 
+                type="email" placeholder="Email" onChange={(e)=> setEmail(e.target.value)} value={email}/>
                 {/* <MdEmail className={style.icon}/> */}
             </div>
             <div className={style.barContainer}>
@@ -99,7 +103,7 @@ function OlineBooking(){
 
             <div className={style.checkContainer}>
                 
-                <label><input type="checkbox" placeholder="Check" onChange={(e)=> setPrivCheck(e.target.value)} value={privCheck} /> </label>
+                <label><input type="checkbox" placeholder="Check" onChange={(e)=> setPrivCheck(!privCheck)} value={privCheck} /> </label>
                 <p>
                 Li e aceito os <a href="">termos e condições</a> e a <a href="">política de privacidade</a>.
                 </p>

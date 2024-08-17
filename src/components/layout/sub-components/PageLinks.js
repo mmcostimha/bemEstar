@@ -10,13 +10,11 @@ function PageLinks({type,sobreRef,staffRef,homeRef,casosRef,marcacaoRef,scrolled
 
     const onClickHandle = (e, ref,page) => {
         e.preventDefault();
-        console.log(page);
         if (location.pathname === page) {
             ref?.current?.scrollIntoView({ behavior: 'smooth' });
         }else{
             setScrollToSection(ref);
             navigate(page);
-            console.log(page);
         }
     };
     const teste=(type==="mobile");

@@ -1,20 +1,38 @@
-#locationContainer{
+@import "../../../color.css";
+
+.locationContainer{
     grid-area: maps;
     margin: 0 7vh 7vh 7vh;
     justify-content: start;
-    position: relative;
     display: flex;
+    flex-direction: column;
     box-shadow: 0px 0px 16px #999;
-    
 }
-
-#mapContainer{
+.mapContainer{
     width: 100%;
     height: 100%;
+    border: none;
+}
+
+.mapButon{
+    width: 100%;
+    height: 20%;
+    background-color: var(--secundary-color);
+    border: none;
+    color: white;
+    transition: 0.02s;
+}
+.mapButon:hover{
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+}
+.mapButon:active{
+    transform: scale(0.98);
 }
 
 @media only screen and (max-width: 780px){
-    #locationContainer{
+    .locationContainer{
         margin: 3vh;
         max-width: 100%;
         height: 70vh;
