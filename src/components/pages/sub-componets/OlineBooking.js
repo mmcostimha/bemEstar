@@ -1,10 +1,6 @@
 import style from "./OlineBooking.module.css"
-import { MdEmail } from "react-icons/md";
-import { IoPerson } from "react-icons/io5";
-import { BsFillTelephoneFill } from "react-icons/bs";
 import { useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
-import { FaInfoCircle } from "react-icons/fa";
 import emailJs from "@emailjs/browser"
 
 
@@ -74,31 +70,21 @@ function OlineBooking(){
             <div className={style.titleContainer}>
                 <FaCalendarAlt className={style.titleIcon}/>
                 <h1>Pedido de Marcação Online</h1>
-                {/* <button onClick={(e)=>infoClickHandle(e)}><FaInfoCircle className={style.info} /></button> */}
             </div>
-            {/* {info && (
-                <div className={style.textInfoContainer}>
-                    <p>Seu pedido será e efetuado e lhe será enviado uma confirmação, esta confirmação será gerada no final do expediente e será enviada tanto em formato de email quanto em formado de mensagem.</p>
-                </div>
-            )} */}
             <div className={style.barContainer}>
                 <input type="text" placeholder="Nome" onChange={(e)=> setName(e.target.value)} value={name}/>
-                {/* <IoPerson className={style.icon}/> */}
             </div>
             
             <div className={style.barContainer}>
                 <input className={`${ submitTried ? style.redBorder: console.log("tentando")}`} 
                 type="email" placeholder="Email" onChange={(e)=> setEmail(e.target.value)} value={email}/>
-                {/* <MdEmail className={style.icon}/> */}
             </div>
             <div className={style.barContainer}>
                 <input type="tel" placeholder="Telemóvel" onChange={(e)=> setNumber(e.target.value)} value={number}/>
-                {/* <BsFillTelephoneFill className={style.icon}/> */}
             </div>
             
             <div className={style.dateContainer}>
                 <input type="datetime-local" onChange={(e)=> setDate(e.target.value)} value={date} />
-                {/* <MdEmail className={style.fakeicon}/> */}
             </div>
 
             <div className={style.checkContainer}>
@@ -108,7 +94,6 @@ function OlineBooking(){
                 Li e aceito os <a href="">termos e condições</a> e a <a href="">política de privacidade</a>.
                 </p>
                 
-                {/* <MdEmail className={style.fakeicon}/> */}
             </div>
 
             {sent ? (

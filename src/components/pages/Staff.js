@@ -18,6 +18,8 @@ function Staff({staffRef}){
       if (loading) return "Loading...";
       if (error) return "Something Bad Happened";
     
+      
+    
     function ListaDeItens({ itens }) {
         return (
             <>
@@ -28,7 +30,7 @@ function Staff({staffRef}){
                             <div key={index} className={style.person_container_left}>
                                 <img src={item.foto.url} alt="employee"/>
                                 
-                                <div className={style.info}>
+                                <div className={`${style.info}`}>
                                     <h2 >{item.nome}</h2>
                                     <p >{item.descrition}</p>
                                 </div>
